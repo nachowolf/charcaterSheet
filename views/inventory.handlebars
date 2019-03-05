@@ -1,0 +1,123 @@
+<div class="row">
+    <div class="col-sm-8">
+        <h1>Equipment</h1>
+        <form>
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="item">Item</label>
+      <input type="text" class="form-control" id="item" placeholder="Item">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="description">Description</label>
+      <input type="textarea" class="form-control" id="description" placeholder="Description">
+    </div>
+ 
+  <div class="form-group col-md-3">
+    <label for="quantity">Quantity</label>
+    <input type="number" min=0 class="form-control" id="quatity" placeholder="quantity">
+  </div>
+  <div class="form-group col-md-2">
+      <label for="inventory">Space: 10/50</label>
+  <button type="submit" class="btn btn-primary" id="inventory">Add to Inventory</button>
+  </div>
+  </div>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">Description</th>
+      <th scope="col">Quantity</th>
+      <th scope="col"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><strong>QuaterStaff</strong></td>
+      <td>a stout pole 6–8 feet long, formerly used as a weapon.</td>
+      <td>1</td>
+      <td>
+          <button><i class="fas fa-trashcan">Equip</i></button>
+          <button><i class="fas fa-trashcan">Discard</i></button>
+      </td>
+    </tr>    
+  </tbody>
+</table>
+
+    </div>
+
+    <div class="col-sm-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <h1>Purse</h1>
+                    </th>
+                    <th scope="col">
+                        <h1>Bank</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">
+                        <ul class="list-group">
+                            {{#each purse}}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                {{coin}}
+                                <span class="badge badge-{{coin}} badge-pill">{{amount}}</span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </th>
+                    <td>
+                        <ul class="list-group">
+
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                                <form action="/deposit-coins" method="POST">
+
+                                    <input type="number" min=0 name='amount'>
+                                    <select name="coins">
+                                        <option value="">choose coin</option>
+                                        <option value="copper">Copper</option>
+                                        <option value="silver">Silver</option>
+                                        <option value="gold">Gold</option>
+                                        <option value="platinum">Platinum</option>
+                                    </select>
+
+                                    <button type="submit"><i class="fas fa-plus"></i></button>
+                                </form>
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <form action="/withdraw-coins" method="POST">
+                                    <input type="number" min=0 name="amount">
+                                    <br>
+                                    <select name="coins">
+                                        <option value="">choose coin</option>
+                                        <option value="copper">Copper</option>
+                                        <option value="silver">Silver</option>
+                                        <option value="gold">Gold</option>
+                                        <option value="platinum">Platinum</option>
+                                    </select>
+                                    <button type="submit"><i class="fas fa-minus"></i></button>
+
+                                </form>
+                            </li>
+                        </ul>
+                    </td>
+
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+
+
+
+
+</div>

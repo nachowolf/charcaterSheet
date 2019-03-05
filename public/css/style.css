@@ -1,0 +1,95 @@
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+input[type = "submit"]{
+margin: auto;
+text-align: center;
+}
+
+input[type = "number"]{
+margin-left:-1vw;
+    }
+
+form{
+    text-align: center;
+}
+
+.badge-gold {
+    color: #212529;
+    background-color: gold;
+}
+
+.badge-gold[href]:focus,
+.badge-gold[href]:hover {
+    color: #212529;
+    text-decoration: none;
+    background-color:gold;
+}
+
+.badge-copper {
+    color: #212529;
+    background-color: #b87333;
+}
+
+.badge-copper[href]:focus,
+.badge-copper[href]:hover {
+    color: #212529;
+    text-decoration: none;
+    background-color:#b87333;
+}
+
+.badge-silver {
+    color: #212529;
+    background-color: silver;
+}
+
+.badge-silver[href]:focus,
+.badge-silver[href]:hover {
+    color: #212529;
+    text-decoration: none;
+    background-color: silver;
+}
+
+.badge-platinum {
+    color: #212529;
+    background-color: #e5e4e2;
+}
+
+.badge-platinum[href]:focus,
+.badge-platinum[href]:hover {
+    color: #212529;
+    text-decoration: none;
+    background-color: #e5e4e2;
+}
+
+.dropdown-stat {
+    display: none;
+    position: absolute;
+    width:5vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.stat:hover .dropdown-stat {display: block;}
+
+.stat{
+    text-align: center;
+    border:solid;
+    padding:10px;
+    border-radius: 50%;
+}
+.row{
+    padding-top:10px;
+}
+
+.tick-block{
+    width:5vw;
+    height:5vh;
+    border:solid;
+    border-radius: 50%;
+}
+
+td{
+    text-align:center;
+}
