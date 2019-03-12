@@ -4,7 +4,8 @@ module.exports = function(characterDb, get){
         try{
         let purse = await characterDb.allPurse();
         let coins = purse.map(purse => purse)
-//         console.log("delete me");
+        console.log("delete me");
+        console.log("delete me too")
         return coins
         }
         catch(err){
